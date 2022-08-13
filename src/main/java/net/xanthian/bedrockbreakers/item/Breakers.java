@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -24,7 +25,7 @@ public class Breakers
             new PickaxeItem(ToolMaterials.OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings().group(Init.OID)) {
                 @Override
                 public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-                    tooltip.add(Text.translatable("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
+                    tooltip.add(new TranslatableText("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
                 }
             });
 
@@ -32,7 +33,7 @@ public class Breakers
             new PickaxeItem(ToolMaterials.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings().group(Init.OID)) {
                 @Override
                 public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-                    tooltip.add(Text.translatable("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
+                    tooltip.add(new TranslatableText("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
                 }
             });
 
