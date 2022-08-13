@@ -18,6 +18,11 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(AbstractBlock.class)
 public class AbstractBlockMixin {
+
+    /**
+     * @author Nokko, Edited by Xanthian 2022
+     **/
+
     final float effectiveHardness = 75.0F;
     final float effectiveHardness2 = 150.0F;
 

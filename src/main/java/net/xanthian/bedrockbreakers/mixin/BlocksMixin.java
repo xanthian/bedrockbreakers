@@ -10,6 +10,11 @@ import org.spongepowered.asm.mixin.injection.Slice;
 
 @Mixin(Blocks.class)
 public class BlocksMixin {
+
+    /**
+     * @author LlamaLad7
+     **/
+
     @Redirect(
             method = "<clinit>",
             slice = @Slice(from = @At(value = "CONSTANT", args = "stringValue=bedrock")),
