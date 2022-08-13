@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "bedrockbreakers:pure_bedrock"
+    },
+    "D": {
+      "item": "bedrockbreakers:obsidian_infused_diamond"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XDX",
+    "XXX"
+  ],
+  "result": {
+    "item": "bedrockbreakers:bedrock_plated_obsidian_infused_diamond"
+  }
+}

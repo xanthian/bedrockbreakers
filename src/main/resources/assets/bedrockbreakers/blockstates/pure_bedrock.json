@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bedrockbreakers:block/pure_bedrock"
+    }
+  }
+}

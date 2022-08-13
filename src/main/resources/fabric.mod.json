@@ -1,52 +1,25 @@
 {
   "schemaVersion": 1,
-
-  "id": "bedrock_breaking",
-
+  "id": "bedrockbreakers",
   "version": "${version}",
-
-  "name": "Bedrock Breaking",
-  "description": "Allows Bedrock to be broken, with or without a custom pickaxe item. Don't fall!",
-  "authors": [
-    "nokko"
-  ],
-
+  "name": "Bedrock Breakers",
+  "description": "Allows Bedrock to be broken",
+  "authors": ["Xanthian"],
   "contact": {
-    "homepage": "https://nokko.me/",
+    "homepage": "",
     "sources": ""
   },
-
   "license": "CC0-1.0",
-  "icon": "assets/bedrockbreaking/icon.png",
-
+  "icon": "assets/bedrockbreakers/icon.png",
   "environment": "*",
-
   "entrypoints": {
-    "main": [
-      "me.nokko.bedrockbreaking.BedrockBreaking::init"
-    ]
+    "main": ["net.xanthian.bedrockbreakers.Init"]
   },
-
-  "mixins": [
-    "bedrock_breaking.mixins.json"
-  ],
-
+  "mixins": ["bedrockbreakers.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "fabric-language-kotlin": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
-  },
-
-  "suggests": {
-    "flamingo": "*"
-  },
-
-  "custom": {
-    "paradoxconfig": {
-      "package": "me.nokko.bedrockbreaking.config",
-      "configs": ["BedrockBreakingConfig"]
-    }
+    "minecraft": "~1.19",
+    "java": ">=17"
   }
 }

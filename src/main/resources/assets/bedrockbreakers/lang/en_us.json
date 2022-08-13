@@ -1,0 +1,9 @@
+{
+  "item.bedrockbreakers.obsidian_infused_diamond_breaker": "Obsidian Infused Breaker",
+  "item.bedrockbreakers.bedrock_plated_obsidian_infused_diamond_breaker": "Bedrock Plated Breaker",
+  "item.bedrockbreakers.bedrock_plated_obsidian_infused_diamond": "Bedrock Plated, Obsidian Infused-Diamond",
+  "item.bedrockbreakers.obsidian_infused_diamond": "Obsidian Infused-Diamond",
+  "tooltip.obsidianinfuseddiamond.pickaxe" : "Only useable on Bedrock",
+  "block.bedrockbreakers.pure_bedrock": "Pure Bedrock",
+  "block.bedrockbreakers.pure_obsidian": "Pure Obsidian"
+}
