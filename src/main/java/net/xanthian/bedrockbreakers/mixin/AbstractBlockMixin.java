@@ -40,9 +40,17 @@ public class AbstractBlockMixin {
 
         if (state.getBlock() == Blocks.BEDROCK && (stack.getItem() == Breakers.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER)) {
             cir.setReturnValue(player.getBlockBreakingSpeed(state) / effectiveHardness);
-        }
-        else if (state.getBlock() == Blocks.BEDROCK && (stack.getItem() == Breakers.OBSIDIAN_INFUSED_DIAMOND_BREAKER)) {
-                cir.setReturnValue(player.getBlockBreakingSpeed(state) / effectiveHardness2);
-            }
+        } else if (state.getBlock() == Blocks.BEDROCK && (stack.getItem() == Breakers.OBSIDIAN_INFUSED_DIAMOND_BREAKER)) {
+            cir.setReturnValue(player.getBlockBreakingSpeed(state) / effectiveHardness2);
         }
     }
+
+   // public void allowReinforcedDeepSlateBreaking(BlockState state, PlayerEntity player, BlockView world, BlockPos pos, CallbackInfoReturnable<Float> cir, float hardness) {
+     //   ItemStack stack = player.getStackInHand(Hand.MAIN_HAND);
+
+       // if (state.getBlock() == ModBlocks.REINFORCED_DEEPSLATE && (stack.getItem() == Breakers.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER)) {
+         //   cir.setReturnValue(player.getBlockBreakingSpeed(state) / effectiveHardness);
+
+        //}
+    //}
+}

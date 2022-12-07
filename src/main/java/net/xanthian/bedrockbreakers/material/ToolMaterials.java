@@ -2,23 +2,22 @@ package net.xanthian.bedrockbreakers.material;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Lazy;
 
-import net.xanthian.bedrockbreakers.item.Items;
+import net.xanthian.bedrockbreakers.item.ModItems;
 
 import java.util.function.Supplier;
 
 public enum ToolMaterials implements ToolMaterial {
 
-    OBSIDIAN_INFUSED_DIAMOND(-1, 2000, 3F, 2F, 0, () -> Ingredient.ofItems(Items.OBSIDIAN_INFUSED_DIAMOND)),
-    BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND(-1, 4000, 4F, 1F, 0, () -> Ingredient.ofItems(Items.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND));
+    OBSIDIAN_INFUSED_DIAMOND(-1, 2000, 3F, 2F, 0, () -> Ingredient.ofItems(ModItems.OBSIDIAN_INFUSED_DIAMOND)),
+    BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND(-1, 4000, 4F, 1F, 0, () -> Ingredient.ofItems(ModItems.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND));
 
     private final int miningLevel;
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
-    private final Lazy<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
     private ToolMaterials(int miningLevel, int itemDurability,
                           float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
@@ -27,7 +26,7 @@ public enum ToolMaterials implements ToolMaterial {
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy(repairIngredient);
+        this.repairIngredient = repairIngredient;
     }
     void Materials(int i, int i1, float v, float v1, int i2, Object o) {
     }
