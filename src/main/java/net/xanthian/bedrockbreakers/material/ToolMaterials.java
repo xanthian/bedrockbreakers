@@ -48,5 +48,4 @@ public enum ToolMaterials implements ToolMaterial {
     public Ingredient getRepairIngredient() {
         return (Ingredient)this.repairIngredient.get();
     }
-
 }

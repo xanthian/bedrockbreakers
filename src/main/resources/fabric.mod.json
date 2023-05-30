@@ -13,13 +13,15 @@
   "icon": "assets/bedrockbreakers/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["net.xanthian.bedrockbreakers.Init"]
+    "main": [
+      "net.xanthian.bedrockbreakers.Initialise"
+    ]
   },
   "mixins": ["bedrockbreakers.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.14.11",
+    "fabricloader": ">=0.14.18",
     "fabric": "*",
-    "minecraft": "1.19.3",
+    "minecraft": "1.19.4",
     "java": ">=17"
   }
 }

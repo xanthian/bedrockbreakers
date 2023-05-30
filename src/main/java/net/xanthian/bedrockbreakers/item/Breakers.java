@@ -13,7 +13,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
-import net.xanthian.bedrockbreakers.Init;
+import net.xanthian.bedrockbreakers.Initialise;
 import net.xanthian.bedrockbreakers.material.ToolMaterials;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class Breakers
             });
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(Init.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, new Identifier(Initialise.MOD_ID, name), item);
     }
     public static void registerModItems() {
     }
