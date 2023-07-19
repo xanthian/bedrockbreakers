@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -22,7 +22,7 @@ public class Breakers
 {
 
     public static final Item OBSIDIAN_INFUSED_DIAMOND_BREAKER = registerItem("obsidian_infused_diamond_breaker",
-            new PickaxeItem(ToolMaterials.OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings()) {
+            new SwordItem(ToolMaterials.OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings()) {
                 @Override
                 public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
                     tooltip.add(Text.translatable("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
@@ -30,7 +30,7 @@ public class Breakers
             });
 
     public static final Item BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER = registerItem("bedrock_plated_obsidian_infused_diamond_breaker",
-            new PickaxeItem(ToolMaterials.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings()) {
+            new SwordItem(ToolMaterials.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND, 1, 1f, new FabricItemSettings()) {
                 @Override
                 public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
                     tooltip.add(Text.translatable("tooltip.obsidianinfuseddiamond.breaker").formatted(Formatting.ITALIC, Formatting.RED));
