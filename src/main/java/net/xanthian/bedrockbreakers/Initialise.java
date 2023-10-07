@@ -18,7 +18,7 @@ import net.xanthian.bedrockbreakers.item.ModItems;
 
 
 @Mod(Initialise.MOD_ID)
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid= Initialise.MOD_ID, bus= Mod.EventBusSubscriber.Bus.MOD)
 public class Initialise {
 
     public static final String MOD_ID = "bedrockbreakers";
@@ -26,11 +26,11 @@ public class Initialise {
     public Initialise() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::buildCreativeModeTabs);
-
         ModBlocks.BLOCKS.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        modEventBus.addListener(this::buildCreativeModeTabs);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

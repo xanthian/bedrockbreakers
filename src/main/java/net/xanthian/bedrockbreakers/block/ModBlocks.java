@@ -25,10 +25,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PURE_BEDROCK = register("pure_bedrock",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> BEDROCK_STAIRS = register("pure_bedrock_stairs",
             () -> new StairBlock(ModBlocks.PURE_BEDROCK.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> BEDROCK_SLAB = register("pure_bedrock_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> BEDROCK_WALL = register("pure_bedrock_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
 
@@ -38,8 +41,8 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<BlockItem> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()) {
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()) {
 
         });
     }
