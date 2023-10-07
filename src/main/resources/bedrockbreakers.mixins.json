@@ -1,10 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
+  "priority": 1100,
   "package": "net.xanthian.bedrockbreakers.mixin",
+  "refmap": "bedrockbreakers.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AbstractBlockMixin",
+    "BlockBehaviourMixin",
     "BlocksMixin"
   ],
   "injectors": {

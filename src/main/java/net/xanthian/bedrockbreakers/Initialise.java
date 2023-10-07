@@ -1,44 +1,57 @@
 package net.xanthian.bedrockbreakers;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
 import net.xanthian.bedrockbreakers.block.ModBlocks;
 import net.xanthian.bedrockbreakers.item.ModItems;
-import net.xanthian.bedrockbreakers.item.Breakers;
-import net.fabricmc.api.ModInitializer;
 
-public class Initialise implements ModInitializer {
+
+@Mod(Initialise.MOD_ID)
+@Mod.EventBusSubscriber
+public class Initialise {
 
     public static final String MOD_ID = "bedrockbreakers";
 
-    public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "bedrockbreakers"));
+    public Initialise() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-    @Override
-    public void onInitialize() {
+        modEventBus.addListener(this::buildCreativeModeTabs);
 
-        Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(Breakers.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER))
-                .displayName(Text.translatable("bedrockbreakers.group.bedrockbreakers"))
-                .entries((context, entries) -> {
-                    entries.add(Breakers.OBSIDIAN_INFUSED_DIAMOND_BREAKER);
-                    entries.add(ModBlocks.PURE_OBSIDIAN);
-                    entries.add(ModItems.OBSIDIAN_INFUSED_DIAMOND);
-                    entries.add(ModBlocks.PURE_BEDROCK);
-                    entries.add(Breakers.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER);
-                    entries.add(ModItems.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND);
-                })
-                .build());
+        ModBlocks.BLOCKS.register(modEventBus);
 
-        ModItems.registerModItems();
-        Breakers.registerModItems();
-        ModBlocks.registerBlocks();
+        ModItems.register(modEventBus);
+
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    @SubscribeEvent
+    public void buildCreativeModeTabs(BuildCreativeModeTabContentsEvent event) {
+        ResourceKey<CreativeModeTab> tab = event.getTabKey();
+        if (tab == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.getEntries().putAfter(new ItemStack(Items.NETHERITE_PICKAXE), new ItemStack(ModItems.OBSIDIAN_INFUSED_DIAMOND_BREAKER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ModItems.OBSIDIAN_INFUSED_DIAMOND_BREAKER.get()), new ItemStack(ModItems.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND_BREAKER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+        if (tab == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.getEntries().putAfter(new ItemStack(Items.BEDROCK), new ItemStack(ModBlocks.PURE_BEDROCK.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ModBlocks.PURE_BEDROCK.get()), new ItemStack(ModBlocks.BEDROCK_STAIRS.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ModBlocks.BEDROCK_STAIRS.get()), new ItemStack(ModBlocks.BEDROCK_SLAB.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ModBlocks.BEDROCK_SLAB.get()), new ItemStack(ModBlocks.BEDROCK_WALL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(Items.OBSIDIAN), new ItemStack(ModBlocks.PURE_OBSIDIAN.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+        if (tab == CreativeModeTabs.INGREDIENTS) {
+            event.getEntries().putAfter(new ItemStack(Items.DIAMOND), new ItemStack(ModItems.OBSIDIAN_INFUSED_DIAMOND.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(ModItems.OBSIDIAN_INFUSED_DIAMOND.get()), new ItemStack(ModItems.BEDROCK_PLATED_OBSIDIAN_INFUSED_DIAMOND.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
     }
 }

@@ -1,11 +1,13 @@
-Bedrock Breakers
-
-![image](https://user-images.githubusercontent.com/7688001/184493725-2b57ee19-36bd-4fb5-b7eb-80f7ff5656dd.png)
-![image](https://user-images.githubusercontent.com/7688001/184493756-764d240b-e9ef-483a-8b8f-65ac78a99232.png)
-![image](https://user-images.githubusercontent.com/7688001/184493916-6794c14d-13cb-47db-ad23-fd9acd0e3ba8.png)
-![image](https://user-images.githubusercontent.com/7688001/184493929-e32d2a06-8cbe-4c57-b8e3-2c2462d6da68.png)
-![image](https://user-images.githubusercontent.com/7688001/184494105-3abde535-1035-4f40-8f6c-deb9ff40638a.png)
-![image](https://user-images.githubusercontent.com/7688001/184494127-d07655a1-bd95-40e7-8330-d9d0ffbfec5e.png)
-
-
-
+<p style="text-align: center;"><img src="https://i.imgur.com/lrO8YzB.png" alt="" width="1125" height="242" /></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;"><em><strong>Unlock the Unbreakable: Bedrock Breakers Mod</strong></em></span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Dive into the depths of the earth like never before with the Bedrock Breakers Mod! </span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Unleash the power of two extraordinary tools, the Obsidian-Infused Breaker and the Bedrock-Plated Obsidian-Infused Diamond Breaker, and shatter the unbreakable bedrock that once stood in your way. </span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Venture into the most challenging terrain, uncover hidden secrets, and conquer new horizons with the ultimate mining experience. </span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Are you ready to redefine the limits of mining in Minecraft? </span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Explore the Bedrock Breakers Mod today and unearth a world of possibilities!</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-family: terminal, monaco, monospace; font-size: 18px;"><img src="https://i.imgur.com/6UHsUm3.png" /><br /></span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Adds 2 'Breakers' that allow you to break through Bedrock, as well as accompanying items/blocks.</span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">Breakers cannot be used on anything that requires Stone Pickaxe or above ( other than Bedrock itself )</span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">They can be repaired with the appropriate item.</span></p>
+<p><span style="font-family: terminal, monaco, monospace; font-size: 18px;">&nbsp;<img src="https://i.imgur.com/6UHsUm3.png" /></span></p>

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "bedrockbreakers:block/pure_bedrock",
+    "side": "bedrockbreakers:block/pure_bedrock",
+    "top": "bedrockbreakers:block/pure_bedrock"
+  }
+}

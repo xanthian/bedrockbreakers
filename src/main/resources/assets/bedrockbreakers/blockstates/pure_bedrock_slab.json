@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bedrockbreakers:block/pure_bedrock_slab"
+    },
+    "type=double": {
+      "model": "bedrockbreakers:block/pure_bedrock"
+    },
+    "type=top": {
+      "model": "bedrockbreakers:block/pure_bedrock_slab_top"
+    }
+  }
+}

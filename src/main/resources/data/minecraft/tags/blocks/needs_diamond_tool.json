@@ -1,7 +1,11 @@
 {
+  "replace": false,
   "values": [
     "bedrockbreakers:pure_obsidian",
-    "bedrockbreakers:pure_bedrock"
+    "bedrockbreakers:pure_bedrock",
+    "bedrockbreakers:pure_bedrock_stairs",
+    "bedrockbreakers:pure_bedrock_slab",
+    "bedrockbreakers:pure_bedrock_wall"
 
   ]
 }
