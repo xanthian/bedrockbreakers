@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "bedrockbreakers:pure_bedrock"
+    }
+  },
+  "pattern": [
+    "B  ",
+    "BB ",
+    "BBB"
+  ],
+  "result": {
+    "item": "bedrockbreakers:pure_bedrock_stairs"
+  }
+}

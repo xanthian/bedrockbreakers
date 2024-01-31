@@ -2,13 +2,11 @@ package net.xanthian.bedrockbreakers.mixin;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Blocks;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.Slice;
 
-@Debug(export = true)
 @Mixin(Blocks.class)
 public class BlocksMixin {
 

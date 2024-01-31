@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bedrockbreakers:block/pure_obsidian",
+    "side": "bedrockbreakers:block/pure_obsidian",
+    "top": "bedrockbreakers:block/pure_obsidian"
+  }
+}

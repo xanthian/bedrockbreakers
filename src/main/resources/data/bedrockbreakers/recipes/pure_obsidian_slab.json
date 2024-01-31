@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "bedrockbreakers:pure_obsidian"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "item": "bedrockbreakers:pure_obsidian_slab"
+  }
+}

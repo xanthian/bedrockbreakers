@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "bedrockbreakers:pure_bedrock_wall",
+    "bedrockbreakers:pure_obsidian_wall"
+  ]
+}
